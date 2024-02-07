@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap');
+
+
+a{
+    text-decoration: none;
+    color:black
+}
+button{
+    border:none;
+    background-color: #F4F4F4;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input{
+    background-color: #F4F4F4;
+    border: none;
+    border-radius: 5px;
+}
+
+body{
+    display: grid;
+    grid-template: 
+    "leftContainer rightContainer" auto
+    /40% 60%
+    ;
+    justify-items: center;
+    font-family: 'Libre Caslon Text', serif;
+
+}
+
+.leftContainer{
+    grid-area: leftContainer;
+}
+.rightContainer{
+    grid-area: rightContainer;
+    display: grid;
+    grid-template: 
+    "r1"10%
+    "r2"20%
+    "r3"60%
+    "r4"20%
+    /auto
+    ;
+    /* place-items: center; */
+}
+
+.r1{
+    display: grid;
+    grid-template: "1 2" auto
+    /10% 90%;
+    gap: 10px;
+    place-self: center;
+}
+.r1 i{
+    align-self: center;
+}
+.r2{
+    display: grid;
+    place-items:center
+}
+.r2 h3{
+    font-size: 40px;
+    margin-bottom: 0;
+}
+.r2 p{
+    font-size:20px
+}
+.r3{
+    display: grid;
+}
+.r3{
+    grid-template: 
+        "lab1 lab1"10%
+        "inp1 inp1" 10%
+        "lab2 lab2" 10%
+        "inp2 inp2"10%
+        "remember forget"10%
+        "sign sign"10%
+        "google google"10%
+        / auto auto;
+        gap:5px;
+
+}
+.r3 label{
+    align-self:end;
+}
+.r3 .lab1{
+    grid-area: lab1;
+}
+.r3 .lab2{
+    grid-area: lab2;
+}
+.r3 .inp1{
+    grid-area: inp1;
+}
+.r3 .inp2{
+    grid-area: inp2;
+}
+.r3 .remember{
+    grid-area: remember;
+}
+.r3 .forget{
+    grid-area: forget;
+    justify-self: end;
+}
+.r3 a{
+    place-self: stretch;
+}
+.r3 .sign{
+    grid-area: sign;
+    background-color: #C89B64;
+}
+.r3 .google{
+    grid-area: google;
+}
